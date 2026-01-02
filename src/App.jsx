@@ -1,4 +1,3 @@
-import React from 'react'
 import { searchGIF, searchPhotos, searchVideos } from './api/mediaApi'
 
 const App = () => {
