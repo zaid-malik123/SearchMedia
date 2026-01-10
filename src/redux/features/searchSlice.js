@@ -19,7 +19,7 @@ export const searchSlice = createSlice({
         state.activeTab = action.payload
     },
     setResults: (state, action) => {
-        state.results = action.results,
+        state.results = action.payload,
         state.loading = false
     },
     setLoading: (state, action) => {

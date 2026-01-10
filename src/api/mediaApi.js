@@ -7,13 +7,18 @@ const TENOR_KEY = import.meta.env.VITE_TENOR_KEY
 
 
 export async function searchPhotos(query, page=1, per_page=20) {
-    const res = await axios.get("https://api.unsplash.com/photos", {
-        params: {query, page, per_page },
-
-        headers: {Authorization: `Client-ID ${UNSPLASH_API}`}
-    })
-    return res.data
+  const res = await axios.get(
+    "https://api.unsplash.com/search/photos",
+    {
+      params: { query, page, per_page },
+      headers: {
+        Authorization: `Client-ID ${UNSPLASH_API}`
+      }
+    }
+  );
+  return res.data.results;
 }
+
 
 export async function searchVideos(query, per_page=20) {
     const res = await axios.get("https://api.pexels.com/videos/search", {

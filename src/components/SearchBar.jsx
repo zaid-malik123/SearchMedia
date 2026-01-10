@@ -9,7 +9,6 @@ const SearchBar = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     dispatch(setQuery(search))
-    setSearch("")
   }
   return (
     <div>
